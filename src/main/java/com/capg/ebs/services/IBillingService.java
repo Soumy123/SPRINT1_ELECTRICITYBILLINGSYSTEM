@@ -1,5 +1,5 @@
 package com.capg.ebs.services;
-
+import ava.util.list;
 import com.capg.ebs.entities.EntityBill;
 
 public interface IBillingService {
