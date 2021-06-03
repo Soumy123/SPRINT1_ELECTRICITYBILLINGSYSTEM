@@ -6,12 +6,12 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="biller")
+@Table(name="billing")
 
 public class entitybill {
 @Id
 private int billId;
-private int billnum;
+private int billNum;
 private  double grandTotal;
 private double totalTaxAmount;
 private int quantity;
