@@ -1,10 +1,10 @@
 package com.capg.ebs.services;
 
-import com.capg.ebs.entities.entitybill;
+import com.capg.ebs.entities.EntityBill;
 
 public interface Ibillservice {
 	
-	public entitybill addbills(entitybill bill);
-    public entitybill deletebills(entitybill bill);
-    public entitybill updatebills(entitybill billName);
+	public EntityBill addbills(EntityBill bill);
+    public EntityBill deletebills(EntityBill bill);
+    public EntityBill updatebills(EntityBill billName);
 }
