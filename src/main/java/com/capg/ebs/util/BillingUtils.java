@@ -27,10 +27,10 @@ public class BillingUtils {
 	
 	public static Billing convertToBilling(BillingDto billingdto) {
 		Billing billing=new Billing();
-		billing.setBillId(billing.getBillId());
-		billing.setBillnum(billing.getBillnum());
-		billing.setDate(billing.getDate());
-		billing.setGrandTotal(billing.getGrandTotal());
+		billing.setBillId(billingdto.getBillId());
+		billing.setBillnum(billingdto.getBillnum());
+		billing.setDate(billingdto.getDate());
+		billing.setGrandTotal(billingdto.getGrandTotal());
 		return billing;
 	}
 	

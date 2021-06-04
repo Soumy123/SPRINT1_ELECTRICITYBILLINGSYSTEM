@@ -9,8 +9,6 @@ import javax.persistence.Table;
 @Table(name="Customer")
 public class Customer {
 	
-	
-	
 
 		@Id
 		private int customerId;
