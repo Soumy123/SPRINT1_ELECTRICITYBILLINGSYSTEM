@@ -13,8 +13,7 @@ public class Billing {
 private int billId;
 private int billNum;
 private  double grandTotal;
-private double totalTaxAmount;
-private int quantity;
+private LocalDate date;
 public int getBillId() {
 	return billId;
 }
@@ -33,17 +32,12 @@ public double getGrandTotal() {
 public void setGrandTotal(double grandTotal) {
 	this.grandTotal = grandTotal;
 }
-public double getTotalTaxAmount() {
-	return totalTaxAmount;
+
+public LocalDate getDate() {
+	return date;
 }
-public void setTotalTaxAmount(double totalTaxAmount) {
-	this.totalTaxAmount = totalTaxAmount;
-}
-public int getQuantity() {
-	return quantity;
-}
-public void setQuantity(int quantity) {
-	this.quantity = quantity;
+public void setDate(LocalDate date) {
+	this.date = date;
 }
 @Override
 public String toString() {
