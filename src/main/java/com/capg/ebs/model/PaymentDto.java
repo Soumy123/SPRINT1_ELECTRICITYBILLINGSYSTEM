@@ -1,4 +1,4 @@
-package com.capg.ebs.dto;
+package com.capg.ebs.model;
 
 public class PaymentDto {
 	
