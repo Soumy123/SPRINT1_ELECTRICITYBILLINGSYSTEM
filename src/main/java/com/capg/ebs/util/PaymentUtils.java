@@ -1,4 +1,4 @@
-package com.capg.ebs.utils;
+package com.capg.ebs.util;
 
 public class PaymentUtils {
 
