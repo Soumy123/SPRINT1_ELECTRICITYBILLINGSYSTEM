@@ -7,6 +7,6 @@ import com.capg.ebs.entities.Billing;
 
 public interface BillingRepository extends JpaRepository<Billing,Long>{
 	
-	
+
 
 }
