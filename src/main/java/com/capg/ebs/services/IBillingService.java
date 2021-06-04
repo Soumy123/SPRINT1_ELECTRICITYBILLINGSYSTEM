@@ -4,8 +4,8 @@ import com.capg.ebs.entities.EntityBill;
 
 public interface IBillingService {
 	
-	public EntityBill addbills(EntityBill bill);
-        public EntityBill deletebills(EntityBill bill);
-        public EntityBill updatebills(EntityBill billName);
-	public List<EntityBill> getAllBills();
+	public Billing addbills(Billing bill);
+        public void deletebills(Billing bill);
+        public Billing updatebills(Billing billName);
+	public List<Billing> getAllBills();
 }
