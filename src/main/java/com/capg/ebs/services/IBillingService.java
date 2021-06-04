@@ -1,6 +1,6 @@
 package com.capg.ebs.services;
 import java.util.List;
-import com.capg.ebs.entities.EntityBill;
+import com.capg.ebs.entities.Billing;
 
 public interface IBillingService {
 	
