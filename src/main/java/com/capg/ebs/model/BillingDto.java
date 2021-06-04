@@ -5,7 +5,7 @@ package com.capg.ebs.model;
 
 import org.springframework.stereotype.Component;
 
-import com.capg.ebs.entities.Billing;
+
 
 @Component
 
@@ -45,7 +45,8 @@ public class BillingDto {
 	}
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
-	}
 	
+	}
+
 
 }

@@ -2,32 +2,39 @@ package com.capg.ebs.services;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.capg.ebs.entities.Billing;
+import com.capg.ebs.repository.BillingRepository;
 
 public class BillingServiceImpl implements IBillingService {
-
+	
+	@Autowired
+     
+	private BillingRepository repo;
+	
 	@Override
 	public Billing addBills(Billing bill) {
-		// TODO Auto-generated method stub
-		return null;
+
+		return repo.save(bill);
 	}
 
 	@Override
 	public void deleteBills(Billing bill) {
-		// TODO Auto-generated method stub
+
 		
 	}
 
 	@Override
 	public Billing updateBills(Billing billName) {
-		// TODO Auto-generated method stub
-		return null;
+
+		return repo.save(billName);
 	}
 
 	@Override
 	public List<Billing> getAllBills() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return repo.findAll();
 	}
 	
 	
