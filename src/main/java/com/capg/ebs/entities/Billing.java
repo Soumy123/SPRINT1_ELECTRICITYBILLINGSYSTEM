@@ -41,9 +41,8 @@ public void setDate(LocalDate date) {
 }
 @Override
 public String toString() {
-	return "entitybill [billId=" + billId + ", billnum=" + billNum + ", grandTotal=" + grandTotal + ", dueDate=" + date]";
+	return "Billing [billId=" + billId + ", billNum=" + billNum + ", grandTotal=" + grandTotal + ", date=" + date + "]";
 }
-
 
 
 	
