@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.capg.ebs.entities.Billing;
 
 
-public interface BillerRepository extends JpaRepository<Billing,Long>{
+public interface BillingRepository extends JpaRepository<Billing,Long>{
 	
 	
 
