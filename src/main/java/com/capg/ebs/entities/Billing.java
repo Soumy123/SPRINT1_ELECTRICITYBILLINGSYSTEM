@@ -1,5 +1,5 @@
 package com.capg.ebs.entities;
-import java.time.LocalDate
+import java.time.LocalDate;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -41,8 +41,7 @@ public void setDate(LocalDate date) {
 }
 @Override
 public String toString() {
-	return "entitybill [billId=" + billId + ", billnum=" + billNum + ", grandTotal=" + grandTotal + ", totalTaxAmount="
-			+ totalTaxAmount + ", quantity=" + quantity + "]";
+	return "entitybill [billId=" + billId + ", billnum=" + billNum + ", grandTotal=" + grandTotal + ", dueDate=" + date]";
 }
 
 
