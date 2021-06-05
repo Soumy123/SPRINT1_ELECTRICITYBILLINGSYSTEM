@@ -46,7 +46,4 @@ public String toString() {
 			+ totalTaxAmount +  "]";
 }
 
-
-
-	
 }
