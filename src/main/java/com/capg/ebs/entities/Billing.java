@@ -16,7 +16,21 @@ public class Billing {
 private int billId;
 //private int customerId;
 private int billNum;
-private  double grandTotal;
+private int units;
+private  double grandTotal=Units.calculateBillPay(units);
+
+public int getBillNum() {
+	return billNum;
+}
+public void setBillNum(int billNum) {
+	this.billNum = billNum;
+}
+public int getUnits() {
+	return units;
+}
+public void setUnits(int units) {
+	this.units = units;
+}
 private LocalDate date;
 
 public int getBillId() {
@@ -46,9 +60,10 @@ public void setDate(LocalDate date) {
 }
 @Override
 public String toString() {
-	return "Billing [billId=" + billId + ", billNum=" + billNum + ", grandTotal=" + grandTotal + ", date=" + date + "]";
+	return "Billing [billId=" + billId + ", billNum=" + billNum + ", units=" + units + ", grandTotal=" + grandTotal
+			+ ", date=" + date + "]";
 }
 
 
-	
+
 }
