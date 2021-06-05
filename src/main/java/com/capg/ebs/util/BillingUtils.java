@@ -1,5 +1,6 @@
 package com.capg.ebs.util;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,4 +43,22 @@ public class BillingUtils {
 	
 
 }
+=======
+
+
+
+
+public class BillingUtils {
+	
+	//public List<BillingDto> convertToBillingDTOList(List<BillingDto> list) {
+		
+		
+		//dtolist.add(convertToBillingDTO(Billing));
+		
+		//return dtolist;
+	}
+	
+
+	
+>>>>>>> refs/heads/master
 

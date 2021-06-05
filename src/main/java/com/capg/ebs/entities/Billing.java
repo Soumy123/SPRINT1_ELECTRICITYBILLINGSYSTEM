@@ -16,6 +16,7 @@ public class Billing {
 private int billId;
 private Customer customer;
 private int billNum;
+<<<<<<< HEAD
 private int units;
 private  double grandTotal=Units.calculateBillPay(units);
 
@@ -33,6 +34,10 @@ public void setUnits(int units) {
 }
 private LocalDate date;
 
+=======
+private  double grandTotal;
+private double totalTaxAmount;
+>>>>>>> refs/heads/master
 public int getBillId() {
 	return billId;
 }
@@ -59,18 +64,30 @@ public void setDate(LocalDate date) {
 	this.date = date;
 }
 
+<<<<<<< HEAD
 public Customer getCustomer() {
 	return customer;
 }
 public void setCustomer(Customer customer) {
 	this.customer = customer;
 }
+=======
+
+>>>>>>> refs/heads/master
 @Override
 public String toString() {
+<<<<<<< HEAD
 	return "Billing [billId=" + billId + ", billNum=" + billNum + ", units=" + units + ", grandTotal=" + grandTotal
 			+ ", date=" + date + "]";
+=======
+	return "entitybill [billId=" + billId + ", billnum=" + billNum + ", grandTotal=" + grandTotal + ", totalTaxAmount="
+			+ totalTaxAmount +  "]";
+>>>>>>> refs/heads/master
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> refs/heads/master
 }
