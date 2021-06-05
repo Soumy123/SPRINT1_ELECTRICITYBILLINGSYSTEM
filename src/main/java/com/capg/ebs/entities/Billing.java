@@ -1,6 +1,10 @@
 package com.capg.ebs.entities;
 import java.time.LocalDate;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -10,7 +14,10 @@ import javax.persistence.Table;
 
 public class Billing {
 @Id
+@GeneratedValue(strategy = GenerationType.AUTO)
 private int billId;
+@Enumerated(EnumType.STRING)
+
 private int billNum;
 private  double grandTotal;
 private LocalDate date;
