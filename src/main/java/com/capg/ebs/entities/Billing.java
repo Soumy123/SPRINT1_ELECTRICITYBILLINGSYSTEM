@@ -14,7 +14,7 @@ public class Billing {
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
 private int billId;
-//private int customerId;
+private Customer customer;
 private int billNum;
 private int units;
 private  double grandTotal=Units.calculateBillPay(units);
@@ -57,6 +57,13 @@ public LocalDate getDate() {
 }
 public void setDate(LocalDate date) {
 	this.date = date;
+}
+
+public Customer getCustomer() {
+	return customer;
+}
+public void setCustomer(Customer customer) {
+	this.customer = customer;
 }
 @Override
 public String toString() {
