@@ -3,8 +3,8 @@ package com.capg.ebs.util;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.capg.ebs.dto.BillingDto;
 import com.capg.ebs.entities.Billing;
-import com.capg.ebs.model.BillingDto;
 
 public class BillingUtils { 
 

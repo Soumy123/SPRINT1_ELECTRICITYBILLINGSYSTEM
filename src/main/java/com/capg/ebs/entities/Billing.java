@@ -21,6 +21,7 @@ private int billId;
 private int billNum;
 private  double grandTotal;
 private LocalDate date;
+
 public int getBillId() {
 	return billId;
 }
