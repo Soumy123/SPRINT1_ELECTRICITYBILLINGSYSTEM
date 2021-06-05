@@ -1,8 +1,8 @@
 package com.capg.ebs.entities;
 import java.time.LocalDate;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -14,12 +14,31 @@ public class Billing {
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
 private int billId;
-
-private int billNum;
 private int units;
+private int billNum;
 private  double grandTotal;
 private LocalDate date;
+private Customer customer;
 
+
+public int getUnits() {
+	return units;
+}
+public void setUnits(int units) {
+	this.units = units;
+}
+public int getBillNum() {
+	return billNum;
+}
+public void setBillNum(int billNum) {
+	this.billNum = billNum;
+}
+public Customer getCustomer() {
+	return customer;
+}
+public void setCustomer(Customer customer) {
+	this.customer = customer;
+}
 public int getBillId() {
 	return billId;
 }
@@ -47,7 +66,7 @@ public void setDate(LocalDate date) {
 }
 @Override
 public String toString() {
-	return "Billing [billId=" + billId + ", billNum=" + billNum + ", grandTotal=" + grandTotal + ", date=" + date + "]";
+	return "Billing [billId=" + billId + ", billNum=" + billNum + ", grandTotal=" + grandTotal + ", date=" + date + ", units="+units+"]";
 }
 
 
