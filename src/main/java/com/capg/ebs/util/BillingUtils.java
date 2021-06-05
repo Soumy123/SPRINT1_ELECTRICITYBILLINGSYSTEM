@@ -6,7 +6,7 @@ import java.util.List;
 import com.capg.ebs.entities.Billing;
 import com.capg.ebs.model.BillingDto;
 
-public class BillingUtils {
+public class BillingUtils { 
 
 	public static List<BillingDto> convertToBillingDtoList(List<Billing> list){
 	List<BillingDto> dto = new ArrayList<BillingDto>();
@@ -32,6 +32,7 @@ public class BillingUtils {
 		billing.setDate(billingdto.getDate());
 		billing.setGrandTotal(billingdto.getGrandTotal());
 		return billing;
+		
 	}
 	
 	
