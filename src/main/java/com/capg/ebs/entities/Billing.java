@@ -14,7 +14,6 @@ private int billId;
 private int billNum;
 private  double grandTotal;
 private double totalTaxAmount;
-private int quantity;
 public int getBillId() {
 	return billId;
 }
@@ -39,16 +38,12 @@ public double getTotalTaxAmount() {
 public void setTotalTaxAmount(double totalTaxAmount) {
 	this.totalTaxAmount = totalTaxAmount;
 }
-public int getQuantity() {
-	return quantity;
-}
-public void setQuantity(int quantity) {
-	this.quantity = quantity;
-}
+
+
 @Override
 public String toString() {
 	return "entitybill [billId=" + billId + ", billnum=" + billNum + ", grandTotal=" + grandTotal + ", totalTaxAmount="
-			+ totalTaxAmount + ", quantity=" + quantity + "]";
+			+ totalTaxAmount +  "]";
 }
 
 
