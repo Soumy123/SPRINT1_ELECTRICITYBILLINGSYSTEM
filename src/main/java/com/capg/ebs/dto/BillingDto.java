@@ -1,4 +1,4 @@
-package com.capg.ebs.model;
+package com.capg.ebs.dto;
 
 
 
