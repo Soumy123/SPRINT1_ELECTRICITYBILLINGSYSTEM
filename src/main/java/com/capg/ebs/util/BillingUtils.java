@@ -21,7 +21,9 @@ public class BillingUtils {
 		billingdto.setBillId(billing.getBillId());
 		billingdto.setBillnum(billing.getBillnum());
 		billingdto.setDate(billing.getDate());
-		billingdto.setGrandTotal(billing.getGrandTotal());
+		billingdto.setUnits(billing.getUnits());
+		billingdto.setCustomer(billing.getCustomer());
+		//billingdto.setGrandTotal(billing.getGrandTotal());
 		return billingdto;
 	}
 	
@@ -30,7 +32,9 @@ public class BillingUtils {
 		billing.setBillId(billingdto.getBillId());
 		billing.setBillnum(billingdto.getBillnum());
 		billing.setDate(billingdto.getDate());
-		billing.setGrandTotal(billingdto.getGrandTotal());
+		billing.setUnits(billingdto.getUnits());
+		billing.setCustomer(billingdto.getCustomer());
+		//billing.setGrandTotal(billingdto.getGrandTotal());
 		return billing;
 		
 	}
@@ -38,3 +42,4 @@ public class BillingUtils {
 	
 
 }
+
