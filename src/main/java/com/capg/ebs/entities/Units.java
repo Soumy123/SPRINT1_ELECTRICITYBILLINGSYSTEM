@@ -1,7 +1,6 @@
 package com.capg.ebs.entities;
 
 public class Units {
-<<<<<<< HEAD
 	 
 	
        public static double calculateBillPay(int units) {
@@ -18,8 +17,5 @@ public class Units {
     else if(units>300)
 	billpay=100*1.20+200 *2+(units-300)*3;
    return billpay;
-} 
-=======
-
->>>>>>> refs/heads/master
+       }
 }

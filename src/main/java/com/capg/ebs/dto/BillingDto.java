@@ -1,5 +1,4 @@
 package com.capg.ebs.dto;
-<<<<<<< HEAD
 import java.time.LocalDate;
 
 import com.capg.ebs.entities.*;
@@ -39,10 +38,10 @@ public int getBillnum() {
 public void setBillnum(int billnum) {
 	this.billNum = billnum;
 }
-/*
- * public double getGrandTotal() { return grandTotal; } public void
- * setGrandTotal(double grandTotal) { this.grandTotal = grandTotal; }
- */
+
+ public double getGrandTotal() { return grandTotal; } public void
+ setGrandTotal(double grandTotal) { this.grandTotal = grandTotal; }
+
 
 public LocalDate getDate() {
 	return date;
@@ -56,10 +55,7 @@ public String toString() {
 }
 
 
-	
 }
-
-=======
 
 
 
@@ -111,4 +107,4 @@ public class BillingDto {
 
 
 }
->>>>>>> refs/heads/master
+
