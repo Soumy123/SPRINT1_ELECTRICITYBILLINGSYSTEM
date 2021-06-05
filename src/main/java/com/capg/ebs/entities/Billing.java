@@ -16,7 +16,6 @@ public class Billing {
 private int billId;
 private Customer customer;
 private int billNum;
-
 private int units;
 private  double grandTotal=Units.calculateBillPay(units);
 
@@ -33,7 +32,7 @@ public void setUnits(int units) {
 	this.units = units;
 }
 private LocalDate date;
-private  double grandTotal;
+
 private double totalTaxAmount;
 
 public int getBillId() {
@@ -73,9 +72,6 @@ public void setCustomer(Customer customer) {
 public String toString() {
 	return "Billing [billId=" + billId + ", billNum=" + billNum + ", units=" + units + ", grandTotal=" + grandTotal
 			+ ", date=" + date + "]";
-
-	return "entitybill [billId=" + billId + ", billnum=" + billNum + ", grandTotal=" + grandTotal + ", totalTaxAmount="
-			+ totalTaxAmount +  "]";
 
 }
 }
