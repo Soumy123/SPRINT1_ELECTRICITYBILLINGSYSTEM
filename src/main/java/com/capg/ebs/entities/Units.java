@@ -1,30 +1,21 @@
 package com.capg.ebs.entities;
 
-import java.util.Scanner;
-
 public class Units {
 	 
-	 public static void main(String args[]) 
-    {   
-   long units;
-
-   Scanner sc = new Scanner(System.in);
-
-   System.out.println("enter number of units");
-   
-       units=sc.nextLong();
-
+	
+       public static double calculateBillPay(int units) {
+       Billing bill=new Billing();
+       units= bill.getUnits();
  	   double billpay=0;
-
+ 	
        if(units<100)
-	billpay=units*1.20;
+	 billpay= units*1.20;
 
-	    else if(units<300)
+	    else if(units<300 &&units>100)
 	billpay=100*1.20+(units-100)*2;
 
     else if(units>300)
 	billpay=100*1.20+200 *2+(units-300)*3;
-
-          System.out.println("Bill to pay : " + billpay); 
+   return billpay;
 } 
 }
