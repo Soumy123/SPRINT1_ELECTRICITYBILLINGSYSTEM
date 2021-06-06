@@ -11,7 +11,7 @@ import com.capg.ebs.exception.BillingNotFoundException;
 import com.capg.ebs.repository.BillingRepository;
 import com.capg.ebs.util.BillingUtils;
 
-public class BillingServiceImp implements IBillingService {
+public class BillingServiceImpl implements IBillingService {
 	
 	@Autowired
      
