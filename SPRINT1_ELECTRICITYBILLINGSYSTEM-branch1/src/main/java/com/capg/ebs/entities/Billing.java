@@ -1,9 +1,13 @@
 package com.capg.ebs.entities;
 import java.time.LocalDate;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 
@@ -13,10 +17,14 @@ import javax.persistence.Table;
 public class Billing {
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
-private int billId;
+private Long billId;
+@OneToOne(cascade=CascadeType.ALL)
+@JoinColumn(name="customerId")
 private Customer customer;
 private int billNum;
 private int units;
+
+private LocalDate date;
 private  double grandTotal=Units.calculateBillPay(units);
 
 public int getBillNum() {
@@ -31,14 +39,12 @@ public int getUnits() {
 public void setUnits(int units) {
 	this.units = units;
 }
-private LocalDate date;
 
-private double totalTaxAmount;
 
-public int getBillId() {
+public Long getBillId() {
 	return billId;
 }
-public void setBillId(int billId) {
+public void setBillId(Long billId) {
 	this.billId = billId;
 }
 public int getBillnum() {
@@ -47,12 +53,7 @@ public int getBillnum() {
 public void setBillnum(int billnum) {
 	this.billNum = billnum;
 }
-public double getGrandTotal() {
-	return grandTotal;
-}
-public void setGrandTotal(double grandTotal) {
-	this.grandTotal = grandTotal;
-}
+
 
 public LocalDate getDate() {
 	return date;
