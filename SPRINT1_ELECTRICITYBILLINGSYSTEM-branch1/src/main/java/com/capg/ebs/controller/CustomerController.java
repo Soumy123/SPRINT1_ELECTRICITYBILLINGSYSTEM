@@ -17,11 +17,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.capg.ebs.entities.Customer;
 import com.capg.ebs.services.ICustomerServiece;
 
+
 @RestController
 @RequestMapping("/ebs/cust")
 
 public class CustomerController {
 
+	
 	@Autowired
 	ICustomerServiece serviece;
 
