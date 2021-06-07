@@ -1,6 +1,6 @@
 package com.capg.ebs.services;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +20,8 @@ public class BillingServiceImpl implements IBillingService {
 	@Override
 	public BillingDto addBills(Billing billing) {
 	Billing bill =	billingrepository.save(billing);
-	BillingDto billingdto=BillingUtils.convertToBillingDto(billing);
-	return billingdto;
+	BillingDto billingDTO=BillingUtils.convertToBillingDto(bill);
+	return billingDTO;
 	
 	}
 
@@ -42,8 +42,8 @@ public class BillingServiceImpl implements IBillingService {
 		if(billing!=null) {
 			Billing billing2=new Billing();
 			Billing bill=billingrepository.save(billing2);
-			BillingDto billingdto=BillingUtils.convertToBillingDto(billing2);
-			return billingdto;
+			BillingDto billingDTO=BillingUtils.convertToBillingDto(bill);
+			return billingDTO;
 		}
 		else 
 			throw new BillingNotFoundException();
@@ -61,8 +61,8 @@ public class BillingServiceImpl implements IBillingService {
 		Billing billing=billingrepository.findById(billId).orElse(null);
 		if(billing!=null) {
 			Billing billing1=billingrepository.getById(billId);
-			BillingDto billingdto=BillingUtils.convertToBillingDto(billing1);
-			return billingdto;
+			BillingDto billingDTO=BillingUtils.convertToBillingDto(billing1);
+			return billingDTO;
 		}
 		else
 			throw new BillingNotFoundException();
