@@ -17,15 +17,18 @@ import javax.persistence.Table;
 public class Billing {
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
+@NotNull(message="Bill Id cannot be null")
 private Long billId;
 @OneToOne(cascade=CascadeType.ALL)
 @JoinColumn(name="customerId")
 private Customer customer;
+@NotEmpty(message="Bill Num cannot be Empty")
 private int billNum;
-private int units;
+@Min(value=10,message="should be greater than 10")
+private static int units;
 
 private LocalDate date;
-private  double grandTotal=Units.calculateBillPay(units);
+private  double grandTotal=calculateBillPay(units);
 
 public int getBillNum() {
 	return billNum;
@@ -33,7 +36,7 @@ public int getBillNum() {
 public void setBillNum(int billNum) {
 	this.billNum = billNum;
 }
-public int getUnits() {
+public static int getUnits() {
 	return units;
 }
 public void setUnits(int units) {
@@ -68,6 +71,22 @@ public Customer getCustomer() {
 public void setCustomer(Customer customer) {
 	this.customer = customer;
 }
+
+public static double calculateBillPay(int units) {
+	   
+    units=getUnits();
+	   double billpay=0;
+	
+    if(units<100)
+	 billpay= units*1.20;
+
+	    else if(units<300 &&units>100)
+	billpay=100*1.20+(units-100)*2;
+
+ else if(units>300)
+	billpay=100*1.20+200 *2+(units-300)*3;
+return billpay;
+    }
 
 @Override
 public String toString() {
