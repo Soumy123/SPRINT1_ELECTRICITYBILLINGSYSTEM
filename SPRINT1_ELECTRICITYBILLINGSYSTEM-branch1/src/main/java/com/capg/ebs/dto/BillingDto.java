@@ -12,20 +12,13 @@ import com.capg.ebs.entities.Customer;
 
 
 
-@Entity
-@Table(name="billing")
-
+@Component
 public class BillingDTO {
-@Id
-@GeneratedValue(strategy = GenerationType.AUTO)
-@NotNull(message="Bill Id cannot be null")
+
+
 private Long billId;
-@OneToOne(cascade=CascadeType.ALL)
-@JoinColumn(name="customerId")
 private Customer customer;
-@NotEmpty(message="Bill Num cannot be Empty")
 private int billNum;
-@Min(value=10,message="should be greater than 10")
 private static int units;
 
 private LocalDate date;
